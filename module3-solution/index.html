@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
-
-      <script src="js/angular.min.js"></script>
-      <script src="app.js"></script>
   </head>
 <body ng-app="NarrowItDownApp">
    <div class="container" ng-controller="NarrowItDownController as narrowItDown">
@@ -27,5 +24,11 @@
     <h3 class="cleared nothing-to-show" ng-if="!narrowItDown.shouldDisplay">Nothing found!</h3>
   </div>
 
+
+   <script src="src/angular.min.js"></script>
+   <script src="src/narrowitdown//narrowitdown.module.js"></script>
+   <script src="src/narrowitdown//narrowitdown.controller.js"></script>
+   <script src="src/narrowitdown//menusearch.service.js"></script>
+   <script src="src/narrowitdown//founditems.directive.js"></script>
 </body>
 </html>
