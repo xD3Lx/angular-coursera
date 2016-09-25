@@ -1,0 +1,11 @@
+<table class="cleared">
+    <tr ng-repeat="item in found">
+        <td>{{ $index + 1 }}</td>
+        <td>{{ item.short_name }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.description }}</td>
+        <td>
+            <button class="not-want-button" ng-click="onRemove({index: $index})">Don't want this one!</button>
+        </td>
+    </tr>
+</table>
