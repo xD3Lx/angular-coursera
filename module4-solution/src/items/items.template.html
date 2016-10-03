@@ -1,9 +1,11 @@
-<ul>
-    <li ng-repeat="item in $ctrl.items">
-        {{ item.name }}
-    </li>
-</ul>
+<div class="row">
+    <uib-accordion close-others="false" class="col-md-6">
+        <div uib-accordion-group
+             class="panel-default"
+             ng-repeat="item in $ctrl.items"
+             heading="{{item.name}}({{item.short_name}})">
 
-<!--"menu_items":[{"id":1069,"short_name":"L1",
-"name":"Orange Chicken","description":"chunks of chicken, breaded and deep-fried with sauce containing orange peels; white meat by request:
-for pint $1 extra, for large $2 extra","price_small":null,"price_large":9.75,"small_portion_name":null,"large_portion_name":null}-->
+            <div><b>Description:</b> {{ item.description }}</div>
+        </div>
+    </uib-accordion>
+</div>
