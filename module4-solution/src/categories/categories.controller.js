@@ -1,16 +1,14 @@
-(function () {
-    "use strict";
+(function() {
+  "use strict";
 
-    angular
+  angular
         .module('MenuApp')
         .controller('CategoriesMainController', CategoriesMainController);
 
+  CategoriesMainController.$inject = ['categoriesData'];
+  function CategoriesMainController(categoriesData) {
+    var ctrl = this;
 
-    CategoriesMainController.$inject = ['categoriesData'];
-    function CategoriesMainController(categoriesData) {
-        var ctrl = this;
-
-        ctrl.categories = categoriesData.data;
-    }
-
+    ctrl.categories = categoriesData.data;
+  }
 })();

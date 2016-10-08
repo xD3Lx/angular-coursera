@@ -1,0 +1,12 @@
+{
+    "extends": "google",
+
+    "globals": {
+        "angular" : false
+    },
+
+    "rules": {
+        "require-jsdoc": 0,
+        "max-len": [1, 120, 4, {"ignoreComments": true}]
+    }
+}

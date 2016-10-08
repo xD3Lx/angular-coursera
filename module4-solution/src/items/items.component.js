@@ -1,13 +1,12 @@
-(function () {
-    "use strict";
+(function() {
+  "use strict";
 
-    angular
+  angular
         .module('MenuApp')
         .component('categoryMenuItems', {
-            templateUrl : "src/items/items.template.html",
-            bindings : {
-                items: "<"
-            }
-        })
-
+          templateUrl: "src/items/items.template.html",
+          bindings: {
+            items: "<"
+          }
+        });
 })();

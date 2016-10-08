@@ -1,0 +1,6 @@
+.idea
+.DS_Store
+jsconfig.json
+settings.json
+node_modules
+npm-debug.log
