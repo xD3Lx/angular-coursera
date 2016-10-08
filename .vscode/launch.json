@@ -2,28 +2,17 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch Chrome against localhost, with sourcemaps",
+      "name": "Module-solution4",
       "type": "chrome",
       "request": "launch",
-      "url": "http://localhost:8080",
+      "url": "http://localhost:3004",
       "sourceMaps": true,
-      "webRoot": "${workspaceRoot}"
-    },
-    {
-      "name": "Launch from file, with sourcemaps",
-      "type": "chrome",
-      "request": "launch",
-      "url": "http://localhost:8080",
-      "sourceMaps": true,
-      "file": "${workspaceRoot}/module4-solution/index.html"
-    },
-    {
-      "name": "Attach to Chrome, with sourcemaps",
-      "type": "chrome",
-      "request": "attach",
-      "port": 9222,
-      "sourceMaps": true,
-      "webRoot": "${workspaceRoot}"
+      "webRoot": "${workspaceRoot}/module4-solution"
+      // "runtimeArgs": [
+      //   "--new-window",
+      //   "--user-data-dir=/Users/del/tmp/chromeData",
+      //   "--remote-debugging-port=9222"
+      // ]
     }
   ]
 }

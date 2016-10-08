@@ -4,8 +4,9 @@
   "description": "Angular coursera",
   "main": "index.html",
   "scripts": {
-    "lint":"eslint . ; exit 0",
-    "lint-fix" : "eslint --fix . ; exit 0"
+    "lint": "eslint . ; exit 0",
+    "lint-fix": "eslint --fix . ; exit 0",
+    "dev4": "lite-server -c config/module4.json"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/xD3Lx/angular-coursera#readme",
   "devDependencies": {
     "eslint": "^3.7.1",
-    "eslint-config-google": "^0.6.0"
+    "eslint-config-google": "^0.6.0",
+    "lite-server": "^2.2.2"
   }
 }
