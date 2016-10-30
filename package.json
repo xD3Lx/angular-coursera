@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint . ; exit 0",
     "lint-fix": "eslint --fix . ; exit 0",
-    "dev4": "lite-server -c config/module4.json"
+    "dev4": "lite-server -c config/module4.json",
+    "dev5": "lite-server -c config/module5.json"
   },
   "repository": {
     "type": "git",
