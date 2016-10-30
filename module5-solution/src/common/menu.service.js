@@ -27,12 +27,19 @@
       });
     };
 
+    service.getMenuItem = function(menuItem) {
+      return $http.get(ApiPath + '/menu_items/' + menuItem + '.json')
+                  .then(function(response) {
+                    return response.data;
+                  });
+    };
+
     service.validateFavoutiteItem = function(menuItem) {
       return $http.get(ApiPath + '/menu_items/' + menuItem + '.json')
                   .then(function(response) {
                     return true;
                   }, function(error) {
-                    return false;
+                    return null;
                   });
     };
   }

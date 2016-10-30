@@ -8,7 +8,7 @@
   function UserService() {
     var service = this;
 
-    service.user = {};
+    service.user = null;
 
     service.register = function(userInfo) {
       service.user = userInfo;
