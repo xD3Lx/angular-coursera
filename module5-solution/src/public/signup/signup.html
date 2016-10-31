@@ -43,12 +43,17 @@
           placeholder="Favourite Menu item number..."
           ng-model="signUpCtrl.user.favMenuItem"
           required
+          menu-item-validator
+          ng-model-options="{ debounce: 300 }"
           >
-    <div ng-if="(signUpForm.favmenuitem.$invalid || !signUpCtrl.menuItemExists) && signUpForm.favmenuitem.$touched">
+    <div ng-if="signUpForm.favmenuitem.$error.required && signUpForm.favmenuitem.$touched">
+      Favourite menu item is required
+    </div>
+    <div ng-if="signUpForm.favmenuitem.$error.exists && signUpForm.favmenuitem.$touched">
       No such menu number exists
-    </div>  
+    </div>
     <button class="btn btn-primary" 
-            ng-disabled="signUpForm.$invalid"
+            ng-disabled="signUpForm.$invalid || signUpForm.$pending"
             ng-click="signUpCtrl.onSignUp();"
             >
             Submit

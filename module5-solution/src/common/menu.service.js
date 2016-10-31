@@ -9,10 +9,12 @@
   function MenuService($http, ApiPath) {
     var service = this;
 
+    function unwrap(response) {
+      return response.data;
+    }
+
     service.getCategories = function() {
-      return $http.get(ApiPath + '/categories.json').then(function(response) {
-        return response.data;
-      });
+      return $http.get(ApiPath + '/categories.json').then(unwrap);
     };
 
 
@@ -22,25 +24,20 @@
         config.params = {'category': category};
       }
 
-      return $http.get(ApiPath + '/menu_items.json', config).then(function(response) {
-        return response.data;
-      });
+      return $http.get(ApiPath + '/menu_items.json', config).then(unwrap);
     };
 
     service.getMenuItem = function(menuItem) {
-      return $http.get(ApiPath + '/menu_items/' + menuItem + '.json')
-                  .then(function(response) {
-                    return response.data;
-                  });
+      return $http.get(ApiPath + '/menu_items/' + menuItem + '.json').then(unwrap);
     };
 
-    service.validateFavoutiteItem = function(menuItem) {
-      return $http.get(ApiPath + '/menu_items/' + menuItem + '.json')
-                  .then(function(response) {
-                    return true;
-                  }, function(error) {
-                    return null;
-                  });
+    service.menuItemExists = function(menuItem) {
+      return service.getMenuItem(menuItem)
+                    .then(function(response) {
+                      return true;
+                    }, function(error) {
+                      return false;
+                    });
     };
   }
 })();

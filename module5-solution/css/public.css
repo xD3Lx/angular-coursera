@@ -134,7 +134,7 @@ h3.menu-item-title {
 
 #signUpForm > input {
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 100%;
 }
 
@@ -149,7 +149,7 @@ h3.menu-item-title {
 
 #signUpForm > div {
   color: #ff9249;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-align: left;
 }
 

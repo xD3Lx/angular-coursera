@@ -14,14 +14,10 @@
     ctrl.onSignUp = function() {
       var user = ctrl.user;
 
-      var validateResult = MenuService.validateFavoutiteItem(user.favMenuItem);
-
-      validateResult.then(function(response) {
-        ctrl.completed = response;
-        ctrl.menuItemExists = response;
-        if (response) {
-          UserService.register(user);
-        }
+      MenuService.getMenuItem(user.favMenuItem).then(function(response) {
+        ctrl.completed = true;
+        user.favMenuItemValue = response;
+        UserService.register(user);
       });
     };
   }
